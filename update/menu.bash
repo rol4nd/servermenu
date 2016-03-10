@@ -21,7 +21,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
     SOURCE="$DIR/$TARGET" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
   fi
 done
-
+echo $DIR
 Menufile=$DIR/update/menu.bash
 
 source $DIR/update/header.bash
@@ -77,5 +77,5 @@ case $CHOICE in
 		3) bash $DIR/update/bashrc/installwebserver.bash $Menufile;;
 		4) bash $DIR/update/symfony/installsymfony.bash $Menufile;;
 		5) rebootserver;;
-		6) echo $DIR
+		6) echo "$DIR";;
 esac
