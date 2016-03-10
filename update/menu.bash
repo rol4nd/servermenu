@@ -25,8 +25,9 @@ MENU="Bitte wählen Sie Ihre Option:"
 
 OPTIONS=(1 "Serverupdate durchführen"
          2 "Bashrc installieren"
-         3 "Symfonymenü installieren"
-         4 "Reboot Server")
+         3 "ProFTPD /MySQL / Apache2 / PHP5 installieren"
+         4 "Symfonymenü installieren"
+         5 "Reboot Server")
 
 
 
@@ -59,6 +60,7 @@ clear
 case $CHOICE in
         1) bash /opt/update/update/update.bash $Menufile;;
 		2) bash /opt/update/bashrc/installbash.bash $Menufile;;
-		3) bash /opt/update/symfony/installsymfony.bash $Menufile;;
-		4) rebootserver
+		3) bash /opt/update/bashrc/installwebserver.bash $Menufile;;
+		4) bash /opt/update/symfony/installsymfony.bash $Menufile;;
+		5) rebootserver
 esac
