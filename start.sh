@@ -40,7 +40,7 @@ BACKTITLE="Serveradministration/-installation"
 TITLE="Servermenu"
 MENU="Please choose a option:"
 
-OPTIONS=(1 "Update Server"
+OPTIONS=(1 "Update Server and update Servermenu from git"
          2 "Install Bashrc"
          3 "Install ProFTPD /MySQL / Apache2 / PHP5"
          4 "Prepare for using Symfony"
