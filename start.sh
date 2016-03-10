@@ -22,14 +22,52 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
   fi
 done
 
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+echo "Menu is install in '$DIR'"
+
+Menufile=$DIR/menu.bash
+
+# This features are the minimum for using the menu
 type dialog >/dev/null 2>&1 || apt-get -y -qq install dialog
 type figlet >/dev/null 2>&1 || apt-get -y -qq install figlet
 type vim >/dev/null 2>&1 || apt-get -y -qq install vim
 
-echo "SOURCE is '$SOURCE'"
-RDIR="$( dirname "$SOURCE" )"
-DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-if [ "$DIR" != "$RDIR" ]; then
-  echo "DIR '$RDIR' resolves to '$DIR'"
-fi
-echo "DIR is '$DIR'"
+HEIGHT=15
+WIDTH=60
+CHOICE_HEIGHT=8
+BACKTITLE="Serveradministration/-installation"
+TITLE="Servermenu"
+MENU="Please choose a option:"
+
+OPTIONS=(1 "Update Server"
+         2 "Install Bashrc"
+         3 "Install ProFTPD /MySQL / Apache2 / PHP5"
+         4 "Prepare for using Symfony"
+         5 "Symfonymenü installieren"
+         6 "Reboot Server"
+         7 "ShowPath")
+
+showdialog()
+{
+    CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+}
+
+showdialog
+
+clear
+case $CHOICE in
+        1) bash $DIR/update/update.bash $Menufile $DIR;;
+		2) bash $DIR/update/bashrc/installbash.bash $Menufile;;
+		3) bash $DIR/update/bashrc/installwebserver.bash $Menufile;;
+		4) bash $DIR/update/symfony/installsymfony.bash $Menufile;;
+		5) rebootserver;;
+		6) echo "$DIR";;
+esac
+

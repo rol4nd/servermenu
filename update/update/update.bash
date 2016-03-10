@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 
-source /opt/update/header.bash
-
 echotext "Es wird mit dem Systemupdate begonnen\n\n" "Gre"
 apt-get update
 apt-get -y upgrade

@@ -57,7 +57,6 @@ alias lt='ls -ltr'
 alias lm='ls -al |more'
 alias ld='ls -p | grep "/"'
 alias sam=serveradministrationmenu
-alias symfonymenu=symfonymenu
 alias cu=loggingout
 
 #alias rm='rm -i'
@@ -67,12 +66,7 @@ alias cu=loggingout
 
 serveradministrationmenu()
 {
-    bash /opt/update/menu.bash
-}
-
-symfonymenu()
-{
-    bash /opt/update/startsymfonymenu.bash
+    bash /opt/servermenu/menu.bash
 }
 
 tcf()
