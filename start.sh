@@ -21,6 +21,11 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
     SOURCE="$DIR/$TARGET" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
   fi
 done
+
+type dialog >/dev/null 2>&1 || apt-get -y -qq install dialog
+type figlet >/dev/null 2>&1 || apt-get -y -qq install figlet
+type vim >/dev/null 2>&1 || apt-get -y -qq install vim
+
 echo "SOURCE is '$SOURCE'"
 RDIR="$( dirname "$SOURCE" )"
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"

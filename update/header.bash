@@ -14,8 +14,8 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 
 
-source $DIR/update/bashrc/colors.bash
-source $DIR/opt/update/globals/globalfunc.bash
+source $DIR/bashrc/colors.bash
+source $DIR/globals/globalfunc.bash
 
 #Header
 Version="1.0"
