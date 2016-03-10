@@ -26,7 +26,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 echo "Menu is install in '$DIR'"
 
-Menufile=$DIR/menu.bash
+Startfile=$DIR/menu.bash
 
 # This features are the minimum for using the menu
 type dialog >/dev/null 2>&1 || apt-get -y -qq install dialog
@@ -63,10 +63,10 @@ showdialog
 
 clear
 case $CHOICE in
-        1) bash $DIR/update/update.bash $Menufile $DIR;;
-		2) bash $DIR/update/bashrc/installbash.bash $Menufile;;
-		3) bash $DIR/update/bashrc/installwebserver.bash $Menufile;;
-		4) bash $DIR/update/symfony/installsymfony.bash $Menufile;;
+        1) bash $DIR/update/update.bash $Startfile $DIR;;
+		2) bash $DIR/update/bashrc/installbash.bash $Startfile;;
+		3) bash $DIR/update/bashrc/installwebserver.bash $Startfile;;
+		4) bash $DIR/update/symfony/installsymfony.bash $Startfile;;
 		5) rebootserver;;
 		6) echo "$DIR";;
 esac
