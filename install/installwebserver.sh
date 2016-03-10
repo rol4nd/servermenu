@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source /opt/update/header.bash
-
 echotext "Webserver wird installiert\n\n" "Gre"
 
 apt-get install -y -qq proftpd

@@ -63,10 +63,10 @@ showdialog
 
 clear
 case $CHOICE in
-        1) bash $DIR/update/update.bash $Startfile $DIR;;
-		2) bash $DIR/update/bashrc/installbash.bash $Startfile;;
-		3) bash $DIR/update/bashrc/installwebserver.bash $Startfile;;
-		4) bash $DIR/update/symfony/installsymfony.bash $Startfile;;
+        1) bash $DIR/update/update.sh $Startfile $DIR;;
+		2) bash $DIR/update/bashrc/installbash.bash $Startfile $DIR;;
+		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
+		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 		5) rebootserver;;
 		6) echo "$DIR";;
 esac
