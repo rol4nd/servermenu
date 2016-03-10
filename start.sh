@@ -40,13 +40,12 @@ BACKTITLE="Serveradministration/-installation"
 TITLE="Servermenu"
 MENU="Please choose a option:"
 
-OPTIONS=(1 "Update Server and update Servermenu from git"
+OPTIONS=(1 "Update Server"
          2 "Install Bashrc"
          3 "Install ProFTPD /MySQL / Apache2 / PHP5"
          4 "Prepare for using Symfony"
          5 "Symfonymenü installieren"
-         6 "Reboot Server"
-         7 "ShowPath")
+         6 "Reboot Server")
 
 showdialog()
 {
@@ -68,6 +67,5 @@ case $CHOICE in
 		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 		5) rebootserver;;
-		6) echo "$DIR";;
 esac
 
