@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echotext "Webserver wird installiert\n\n" "Gre"
-
 apt-get install -y -qq proftpd
 
 apt-get install -y -qq mysql-server mysql-client
