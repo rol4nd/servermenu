@@ -66,7 +66,7 @@ alias cu=loggingout
 
 serveradministrationmenu()
 {
-    bash /opt/servermenu/menu.bash
+    bash /menupath/servermenu/start.sh
 }
 
 tcf()
