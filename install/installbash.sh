@@ -21,7 +21,4 @@ done
 /bin/rm $TFILE
 
 
-
-cp $2/bashrc/bash.bashrc /etc/bash.bashrc
-
 bash $1
