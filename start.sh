@@ -63,7 +63,7 @@ showdialog
 clear
 case $CHOICE in
         1) bash $DIR/update/update.sh $Startfile $DIR;;
-		2) bash $DIR/bashrc/installbash.bash $Startfile $DIR;;
+		2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 		5) rebootserver;;
