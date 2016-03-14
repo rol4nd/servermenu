@@ -3,7 +3,8 @@
 rm /etc/bash.bashrc
 
 OLD="menupath"
-NEW=$2
+NEW="$2"
+echo $NEW
 DPATH="$2/bashrc/bash.bashrc"
 BPATH="/etc"
 TFILE="/tmp/out.tmp.$$"
@@ -21,4 +22,4 @@ done
 /bin/rm $TFILE
 
 
-bash $1
+#bash $1
