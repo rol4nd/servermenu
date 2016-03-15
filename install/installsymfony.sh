@@ -5,3 +5,5 @@ chmod a+x /usr/local/bin/symfony
 
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+
+bash $1
