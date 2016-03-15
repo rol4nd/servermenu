@@ -49,7 +49,8 @@ OPTIONS=(1 "Update Server"
          4 "Prepare for using Symfony"
          5 "Install new Symfony-Project"
          6 "Symfonymenü installieren"
-         7 "Reboot Server")
+         7 "Configure Webserver for Symfonyproject"
+         8 "Reboot Server")
 
 showdialog()
 {
@@ -71,7 +72,8 @@ case $CHOICE in
 		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 		5) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
-		6) rebootserver;;
-		7) rebootserver;;
+		6) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
+		7) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
+		8) rebootserver;;
 esac
 
