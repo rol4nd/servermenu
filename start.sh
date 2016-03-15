@@ -33,6 +33,7 @@ type dialog >/dev/null 2>&1 || apt-get -y -qq install dialog
 type figlet >/dev/null 2>&1 || apt-get -y -qq install figlet
 type vim >/dev/null 2>&1 || apt-get -y -qq install vim
 type rpl >/dev/null 2>&1 || apt-get -y -qq install rpl
+type curl >/dev/null 2>&1 || apt-get -y -qq install curl
 
 HEIGHT=15
 WIDTH=60
