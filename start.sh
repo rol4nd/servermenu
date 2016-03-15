@@ -47,8 +47,9 @@ OPTIONS=(1 "Update Server"
          2 "Install Bashrc"
          3 "Install ProFTPD /MySQL / Apache2 / PHP5"
          4 "Prepare for using Symfony"
-         5 "Symfonymenü installieren"
-         6 "Reboot Server")
+         5 "Install new Symfony-Project"
+         6 "Symfonymenü installieren"
+         7 "Reboot Server")
 
 showdialog()
 {
@@ -69,6 +70,8 @@ case $CHOICE in
 		2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
-		5) rebootserver;;
+		5) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
+		6) rebootserver;;
+		7) rebootserver;;
 esac
 
