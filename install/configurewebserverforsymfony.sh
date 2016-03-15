@@ -10,5 +10,3 @@ rm /etc/apache2/sites-available/000-default.conf
 rm /etc/apache2/sites-enabled/000-default.conf
 
 service apache2 restart
-
-bash $1
