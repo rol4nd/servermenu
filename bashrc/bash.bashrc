@@ -66,6 +66,7 @@ alias cu=loggingout
 
 serveradministrationmenu()
 {
+    cd menupath
     bash menupath/start.sh
 }
 
