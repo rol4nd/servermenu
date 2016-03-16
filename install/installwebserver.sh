@@ -14,4 +14,14 @@ apt-get install php5-xcache
 
 service apache2 restart
 
+
+# DefaultRoot
+
+OLD="# DefaultRoot"
+NEW="DefaultRoot"
+
+rpl $OLD $NEW /etc/proftpd/proftpd.conf
+
+service proftpd restart
+
 bash $1
