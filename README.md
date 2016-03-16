@@ -16,3 +16,8 @@ This menuscript is made for install and configure a simple webserver for develop
 ## Fast use
 
 If once the new bashrc is installed, you can open the menu everywhere on your server with the command "sam"
+
+## Creating Symfonyproject
+
+1. The default path is /var/www/symfony
+2. The user for ftp is "ftpsymfony" with the default password "F1leupl0ad"
