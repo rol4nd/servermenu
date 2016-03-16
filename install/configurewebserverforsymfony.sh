@@ -14,3 +14,5 @@ rm /etc/apache2/sites-available/default.conf
 rm /etc/apache2/sites-enabled/default.conf
 
 /etc/init.d/apache2 start
+
+bash $1

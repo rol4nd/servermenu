@@ -72,6 +72,6 @@ case $CHOICE in
 		5) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 		6) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
 		7) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
-		8) rebootserver;;
+		8) reboot;;
 esac
 

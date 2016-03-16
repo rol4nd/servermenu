@@ -12,3 +12,7 @@ This menuscript is made for install and configure a simple webserver for develop
 
 1. cd /opt/servermenu
 2. bash start.sh
+
+## Fast use
+
+If once the new bashrc is installed, you can open the menu everywhere on your server with the command "sam"
