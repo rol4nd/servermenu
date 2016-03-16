@@ -20,7 +20,7 @@ service apache2 restart
 OLD="# DefaultRoot"
 NEW="DefaultRoot"
 
-rpl $OLD $NEW /etc/proftpd/proftpd.conf
+rpl "$OLD" "$NEW" /etc/proftpd/proftpd.conf
 
 service proftpd restart
 
