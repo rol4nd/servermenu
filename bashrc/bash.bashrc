@@ -98,7 +98,6 @@ localnet ()
 myip ()
 {
 	echo -ne `hostname -I`
-	echo "\n\r"
 }
 
 upinfo ()
