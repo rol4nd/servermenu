@@ -1,18 +1,14 @@
 # Servermenu
 
-Manage Bash and Server
+This menuscript is made for install and configure a simple webserver for development
 
-1. Install VIM
-2. Install figlet
-3. Install curl, zip, git
+# How to install
 
-## Installmenu
+1. cd /opt
+2. apt-get install git
+3. git clone https://github.com/rol4nd/servermenu
 
-    1. apt-get install mysql-server mysql-client
-    2. apt-get install -y Apache2
-    3. apt-get install -y php5 libapache2-mod-php5
+# Start menu
 
-## Install Symfony
-
-    1. Install symfony (composer)
-    2. Install composer
+1. cd /opt/servermenu
+2. bash start.sh

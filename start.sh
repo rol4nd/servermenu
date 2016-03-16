@@ -24,8 +24,6 @@ done
 
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-echo "Menu is install in '$DIR'"
-
 Startfile=$DIR/start.sh
 
 # This features are the minimum for using the menu
