@@ -6,4 +6,6 @@ chmod a+x /usr/local/bin/symfony
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
+apt-get -y install php5-gd php5-mysql
+
 bash $1
