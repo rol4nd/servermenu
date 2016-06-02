@@ -32,9 +32,11 @@ type figlet >/dev/null 2>&1 || apt-get -y -qq install figlet
 type vim >/dev/null 2>&1 || apt-get -y -qq install vim
 type rpl >/dev/null 2>&1 || apt-get -y -qq install rpl
 type curl >/dev/null 2>&1 || apt-get -y -qq install curl
+type zip >/dev/null 2>&1 || apt-get -y -qq install zip
+type nano >/dev/null 2>&1 || apt-get -y -qq install nano
 
 
-HEIGHT=15
+HEIGHT=20
 WIDTH=60
 CHOICE_HEIGHT=8
 BACKTITLE="Serveradministration/-installation"
