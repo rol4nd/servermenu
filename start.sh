@@ -46,12 +46,13 @@ MENU="Please choose a option:"
 OPTIONS=(1 "Update Server"
          2 "Install Bashrc"
          3 "Install ProFTPD /MySQL / Apache2 / PHP5"
-         4 "Prepare for using Symfony"
-         5 "Install new Symfony-Project"
-         6 "Symfonymenü installieren"
-         7 "Configure Webserver for Symfonyproject"
-         8 "Reboot Server"
-         9 "Shutdown")
+         4 "Install Mailserver - upcoming feature"
+         5 "Prepare for using Symfony"
+         6 "Install new Symfony-Project"
+         7 "Symfonymenü installieren"
+         8 "Configure Webserver for Symfonyproject"
+         9 "Reboot Server"
+         10 "Shutdown")
 
 showdialog()
 {
@@ -69,13 +70,14 @@ showdialog
 clear
 case $CHOICE in
         1) bash $DIR/update/update.sh $Startfile $DIR;;
-		2) bash $DIR/install/installbash.sh $Startfile $DIR;;
-		3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
-		4) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
-		5) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
-		6) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
-		7) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
-		8) reboot;;
-		9) shutdown -h now;;
+	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
+	3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
+	4) bash $DIR/install/installmailserver.sh $Startfile $DIR;;
+	5) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
+	6) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
+	7) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
+	8) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
+	9) reboot;;
+	10) shutdown -h now;;
 esac
 
