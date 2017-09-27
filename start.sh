@@ -34,10 +34,11 @@ type rpl >/dev/null 2>&1 || apt-get -y -qq install rpl
 type curl >/dev/null 2>&1 || apt-get -y -qq install curl
 type zip >/dev/null 2>&1 || apt-get -y -qq install zip
 type nano >/dev/null 2>&1 || apt-get -y -qq install nano
+type sudo >/dev/null 2>&1 || apt-get -y -qq install sudo
 
 
 HEIGHT=20
-WIDTH=60
+WIDTH=80
 CHOICE_HEIGHT=14
 BACKTITLE="Serveradministration/-installation"
 TITLE="Servermenu"
