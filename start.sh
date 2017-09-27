@@ -38,7 +38,7 @@ type nano >/dev/null 2>&1 || apt-get -y -qq install nano
 
 HEIGHT=20
 WIDTH=60
-CHOICE_HEIGHT=8
+CHOICE_HEIGHT=14
 BACKTITLE="Serveradministration/-installation"
 TITLE="Servermenu"
 MENU="Please choose a option:"
@@ -49,7 +49,6 @@ OPTIONS=(1 "Update Server"
          4 "Install MariaDB Server"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
-         13 "Symfonymenü installieren"
          14 "Configure Webserver for Symfonyproject"
          99 "Reboot Server")
 
@@ -72,9 +71,8 @@ case $CHOICE in
 	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 	3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 	4) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
-	5) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
-	6) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
-	7) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
+	11) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
+	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
 	99) reboot;;
 esac
