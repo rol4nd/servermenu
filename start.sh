@@ -45,16 +45,13 @@ MENU="Please choose a option:"
 
 OPTIONS=(1 "Update Server"
          2 "Install Bashrc"
-         3 "Install ProFTPD"
-         4 "Install MariaDB Client"
-         5 "Install MariaDB Server"
-         6 "Install Apache2"
-         7 "Install PHP7"
-         8 "Prepare for using Symfony"
-         9 "Install new Symfony-Project"
-         10 "Symfonymenü installieren"
-         11 "Configure Webserver for Symfonyproject"
-         12 "Reboot Server")
+         3 "Install Webserver (mariaDB Client, Apache2, PHP7.0, proFTPD)"
+         4 "Install MariaDB Server"
+         11 "Prepare for using Symfony"
+         12 "Install new Symfony-Project"
+         13 "Symfonymenü installieren"
+         14 "Configure Webserver for Symfonyproject"
+         99 "Reboot Server")
 
 showdialog()
 {
@@ -74,14 +71,11 @@ case $CHOICE in
     1) bash $DIR/update/update.sh $Startfile $DIR;;
 	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 	3) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
-	4) bash $DIR/install/installmailserver.sh $Startfile $DIR;;
+	4) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
 	5) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 	6) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 	7) bash $DIR/symfony/copysymfonymenu.sh $Startfile $DIR;;
-	8) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
-	9) ;;
-	10) ;;
-	11) ;;
-	12) reboot;;
+	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
+	99) reboot;;
 esac
 
