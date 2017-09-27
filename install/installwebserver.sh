@@ -8,6 +8,8 @@ apt-get install -y php7.0 php7.0-mysql php-xml php-fpm php-apcu php-memcache php
 
 apt-get install -y -qq apache2 apache2-mod-php7.0
 
+apt-get install -y python-certbot-apache
+
 service apache2 restart
 
 
