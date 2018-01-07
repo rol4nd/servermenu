@@ -35,6 +35,8 @@ type curl >/dev/null 2>&1 || apt-get -y -qq install curl
 type zip >/dev/null 2>&1 || apt-get -y -qq install zip
 type nano >/dev/null 2>&1 || apt-get -y -qq install nano
 type sudo >/dev/null 2>&1 || apt-get -y -qq install sudo
+type git >/dev/null 2>&1 || apt-get -y -qq install git
+type subversion >/dev/null 2>&1 || apt-get -y -qq install subversion
 
 
 HEIGHT=20
