@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get install mariadb-server
+PASSWORD="Te3XtcH"
+export DEBIAN_FRONTEND="noninteractive"
+sudo debconf-set-selections <<< "mariadb-server mysql-server/root_password password $PASSWORD"
+sudo debconf-set-selections <<< "mariadb-server mysql-server/root_password_again password $PASSWORD"
+
+apt-get install -y mariadb-server python-mysqldb
 
 bash $1
