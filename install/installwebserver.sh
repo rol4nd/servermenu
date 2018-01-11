@@ -14,7 +14,7 @@ apt-get install -y -qq apt-transport-https
 curl https://packages.sury.org/php/apt.gpg | apt-key add -
 apt-get update
 apt-get install -y -qq php7.1
-
+apt-get install -y -qq php7.1-xml
 apt-get install -y -qq apache2
 
 apt-get install -y python-certbot-apache
