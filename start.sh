@@ -50,6 +50,9 @@ MENU="Please choose a option:"
 
 #Servermenu
 OPTIONS=(1 "Update Server"
+         2 "Install Bashrc"
+         3 "Install MariaDB-Server"
+         4 "Install Webserver (mariaDB-Client, Apache2, PHP 7.1, proFtpd)"
          99 "Reboot Server")
 
 
@@ -80,6 +83,9 @@ showdialog
 clear
 case $CHOICE in
     1) bash $DIR/update/update.sh $Startfile $DIR;;
+	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
+	3) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
+	4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 	99) reboot;;
 esac
 
