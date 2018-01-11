@@ -53,19 +53,10 @@ OPTIONS=(1 "Update Server"
          2 "Install Bashrc"
          3 "Install MariaDB-Server"
          4 "Install Webserver (mariaDB-Client, Apache2, PHP 7.1, proFtpd)"
+         11 "Prepare for using Symfony"
+         12 "Install new Symfony-Project"
+         14 "Configure Webserver for Symfonyproject"
          99 "Reboot Server")
-
-
-
-
-#OPTIONS=(1 "Update Server"
-#         2 "Install Bashrc"
-#         3 "Install Webserver (mariaDB Client, Apache2, PHP7.0, proFTPD)"
-#         4 "Install MariaDB Server"
-#         11 "Prepare for using Symfony"
-#         12 "Install new Symfony-Project"
-#         14 "Configure Webserver for Symfonyproject"
-#         99 "Reboot Server")
 
 showdialog()
 {
@@ -86,6 +77,10 @@ case $CHOICE in
 	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 	3) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
 	4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
+	11) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
+	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
+	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
+
 	99) reboot;;
 esac
 
