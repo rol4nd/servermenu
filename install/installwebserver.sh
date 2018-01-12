@@ -6,7 +6,7 @@ useradd -o ftpuser -u 33 -g www-data -d /var/www/symfony -s /bin/bash
 echo "ftpuser:F1leupl0ad" | chpasswd
 
 #mariaDB-Client
-apt-get install -y -qq mariaDB-client
+apt-get install -y -qq mariadb-client
 
 #PHP 7.1
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/sury.list
