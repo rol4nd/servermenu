@@ -7,6 +7,6 @@ export DEBIAN_FRONTEND="noninteractive"
 
 apt-get install -y mariadb-server python-mysqldb
 
-mysqladmin -u root -p'' password '$PASSWORD'
+mysqladmin -u root -p password $PASSWORD
 
 bash $1
