@@ -33,14 +33,6 @@ else
     mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
 fi
 
-#composercomponents
-composer require twig
-composer require annotations
-composer require symfony/apache-pack
-composer require mailer
-composer require doctrine maker
-composer require --dev profiler
-
 cp $2/symfony/htaccess.example $defaultfolder/$projectname/public/.htaccess
 
 echo "/n/rDATABASE_URL='mysql://$MAINDB:$PASSWDDB@127.0.0.1:3306/$projectname'" >> $defaultfolder/$projectname/.env
