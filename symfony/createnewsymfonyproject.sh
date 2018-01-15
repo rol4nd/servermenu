@@ -33,4 +33,12 @@ else
     mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
 fi
 
+#composercomponents
+composer require twig annotations symfony/apache-pack mailer doctrine maker
+composer requrire --dev profiler
+
+cp $2/symfony/htaccess.example $defaultfolder/$projectname/public/.htaccess
+
+chown www-data:www-data $defaultfolder/$projectname/* -R
+
 bash $1
