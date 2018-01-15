@@ -21,4 +21,7 @@ If once the new bashrc is installed, you can open the menu everywhere on your se
 ## Creating Symfonyproject
 
 1. The default path is /var/www/symfony
-2. The user for ftp is "ftpuser" with the default password "F1leupl0ad" 
+2. The user for ftp is "ftpuser" with the default password "F1leupl0ad"
+3. Creating database "symfony" with user "symfony" and password "Te3XtcH"
+
+ 
