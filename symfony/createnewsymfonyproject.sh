@@ -34,8 +34,12 @@ else
 fi
 
 #composercomponents
-composer require twig annotations symfony/apache-pack mailer doctrine maker
-composer requrire --dev profiler
+composer require twig
+composer require annotations
+composer require symfony/apache-pack
+composer require mailer
+composer require doctrine maker
+composer require --dev profiler
 
 cp $2/symfony/htaccess.example $defaultfolder/$projectname/public/.htaccess
 
