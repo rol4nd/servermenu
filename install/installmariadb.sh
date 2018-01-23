@@ -5,6 +5,7 @@ PASSWORD="Te3XtcH"
 #debconf-set-selections <<< "mariadb-server mariadb-server/root_password password $PASSWORD"
 #debconf-set-selections <<< "mariadb-server mariadb-server/root_password_again password $PASSWORD"
 
-apt-get install mariadb-server python-mysqldb
+apt-get install mariadb-server
+mysql_secure_installation
 
 bash $1
