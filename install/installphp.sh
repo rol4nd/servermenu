@@ -3,9 +3,9 @@
 echo "Install PHP"
 
 #mariaDB-Client
-apt-get install -y -qq mariadb-client
+apt-get install -y mariadb-client
 
-apt-get install -y -qq apt-transport-https
+apt-get install -y apt-transport-https
 
 checkInstallApache()
 {
@@ -16,7 +16,7 @@ checkInstallApache()
 if [ $3 == "7.0" ]
 then
 	#PHP 7.0
-	apt-get install -y -qq php7.0 php7.0-mysql php7.0-xml
+	apt-get install -y php7.0 php7.0-mysql php7.0-xml
 	checkInstallApache
 	apt install apache2 libapache2-mod-php7.0
 elif [ $3 == "7.1" ]
@@ -26,19 +26,19 @@ then
 
 	curl https://packages.sury.org/php/apt.gpg | apt-key add -
 	apt-get update
-	apt-get install -y -qq php7.1 php7.1-xml
+	apt-get install -y php7.1 php7.1-xml
 	checkInstallApache
 
 elif [ $3 == "7.2" ]
 then
 	#PHP 7.2
-	sudo apt-get -y -gg install apt-transport-https lsb-release ca-certificates
+	sudo apt-get -y install apt-transport-https lsb-release ca-certificates
 	sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 	sudo apt-get update
-	sudo apt-get -y -gg install php7.2-cli php7.2-xml
+	sudo apt-get -y install php7.2-cli php7.2-xml
 	checkInstallApache
-	sudo apt-get -y -gg install libapache2-mod-php7.2
+	sudo apt-get -y install libapache2-mod-php7.2
 else
 	echo "no value"
 fi
