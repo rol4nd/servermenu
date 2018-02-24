@@ -54,6 +54,9 @@ OPTIONS=(1 "Update Server"
          3 "Install MariaDB-Server"
          4 "Install Webserver (mariaDB-Client, Apache2, PHP 7.1)"
          5 "Install proFTPd"
+         20 "Install PHP7.0"
+         21 "Install PHP7.1"
+         22 "Install PHP7.2"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
          14 "Configure Webserver for Symfonyproject"
@@ -82,6 +85,8 @@ case $CHOICE in
 	11) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
+	20) bash $DIR/install/installphp.sh $Startfile $DIR "7.0";;
+
 
 	99) reboot;;
 esac
