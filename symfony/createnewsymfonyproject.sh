@@ -33,4 +33,9 @@ else
     mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
 fi
 
+cp $2/symfony/htaccess.example $defaultfolder/$projectname/public/.htaccess
+
+echo "/n/rDATABASE_URL='mysql://$MAINDB:$PASSWDDB@127.0.0.1:3306/$projectname'" >> $defaultfolder/$projectname/.env
+chown www-data:www-data $defaultfolder/$projectname/* -R
+
 bash $1
