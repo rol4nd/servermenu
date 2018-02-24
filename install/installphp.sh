@@ -38,6 +38,7 @@ then
 	sudo apt-get update
 	sudo apt-get -y -gg install php7.2-cli php7.2-xml
 	checkInstallApache
+	sudo -y -gg apt-get install libapache2-mod-php7.2
 else
 	echo "no value"
 fi
