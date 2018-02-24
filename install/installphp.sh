@@ -45,4 +45,4 @@ fi
 
 service apache2 restart
 
-echo $3;
+bash $1
