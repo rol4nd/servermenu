@@ -5,7 +5,7 @@ echo "Install PHP"
 #mariaDB-Client
 apt-get install -y -qq mariadb-client
 
-apt-get install apt-transport-https lsb-release ca-certificates
+apt-get install -y -gg apt-transport-https lsb-release ca-certificates
 apt-get install -y -qq apt-transport-https
 
 checkInstallApache()
