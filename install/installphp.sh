@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Install PHP"
+
 #mariaDB-Client
 apt-get install -y -qq mariadb-client
 
