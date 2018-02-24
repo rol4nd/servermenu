@@ -86,6 +86,8 @@ case $CHOICE in
 	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
 	20) bash $DIR/install/installphp.sh $Startfile $DIR "7.0";;
+	21) bash $DIR/install/installphp.sh $Startfile $DIR "7.1";;
+	22) bash $DIR/install/installphp.sh $Startfile $DIR "7.2";;
 
 
 	99) reboot;;
