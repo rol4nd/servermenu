@@ -5,6 +5,8 @@ projectname="symfony"
 
 composer selfupdate
 composer create-project symfony/skeleton "$defaultfolder/$projectname"
+cd "$defaultfolder/$projectname"
+composer require symfony/apache-pack
 
 chown www-data:www-data $defaultfolder/* -R
 
