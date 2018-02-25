@@ -6,8 +6,8 @@ projectname="symfony"
 composer selfupdate
 cd "$defaultfolder"
 composer create-project symfony/skeleton "$projectname"
-#cd "$projectname"
-#composer require symfony/apache-pack
+cd "$projectname"
+composer require symfony/apache-pack
 
 #Create Database and User
 # create random password
