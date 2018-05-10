@@ -43,6 +43,8 @@ else
 	echo "no value"
 fi
 
+sudo apt-get -y install php-xdebug php-apcu
+
 service apache2 restart
 
 bash $1
