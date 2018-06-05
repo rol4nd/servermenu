@@ -93,7 +93,7 @@ systemshutdown()
     echo ""
     echo "System wird heruntergefahren"
     echo ""
-    echo sleep 1
+    echo sleep 3
     shutdown -h now
 }
 
