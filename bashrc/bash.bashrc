@@ -74,8 +74,6 @@ test()
     sleep 2
     echo "yyy"
     sleep 3
-    echo ppp
-    sleep 4
 }
 
 serveradministrationmenu()
