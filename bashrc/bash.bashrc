@@ -58,6 +58,7 @@ alias lm='ls -al |more'
 alias ld='ls -p | grep "/"'
 alias sam=serveradministrationmenu
 alias cu=loggingout
+alias sd='shutdown -h now'
 
 #alias rm='rm -i'
 #------------------------------------------////
