@@ -88,6 +88,15 @@ loggingout()
     logout
 }
 
+shutdown()
+{
+    echo ""
+    echo "System wird heruntergefahren"
+    echo ""
+    echo sleep 1
+    shutdown -h now
+}
+
 localnet ()
 {
     /sbin/ifconfig | awk /'inet addr/ {print $2}'
