@@ -10,6 +10,6 @@ apt-get autoclean
 
 git pull origin master
 
-bash $DIR/install/installbash.sh $Startfile $DIR;;
+bash $2/install/installbash.sh $1 $2
 
 bash $1
