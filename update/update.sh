@@ -14,4 +14,6 @@ git pull origin master
 
 bash $2/install/installbash.sh $1 $2
 
+exec bash
+
 bash $1
