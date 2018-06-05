@@ -59,18 +59,11 @@ alias ld='ls -p | grep "/"'
 alias sam=serveradministrationmenu
 alias cu=loggingout
 alias sd=systemshutdown
-alias test=test
 
 #alias rm='rm -i'
 #------------------------------------------////
 # Functions and Scripts:
 #------------------------------------------////
-
-test()
-{
-    echo "test"
-    sleep 1
-}
 
 serveradministrationmenu()
 {
