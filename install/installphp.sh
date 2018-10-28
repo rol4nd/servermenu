@@ -42,6 +42,7 @@ then
 	sudo apt-get -y install php7.2-curl
 	sudo apt-get -y install php-mbstring
 	sudo apt-get -y install php7.2-zip
+	sudo apt-get -y install php-mysql
 else
 	echo "no value"
 fi
