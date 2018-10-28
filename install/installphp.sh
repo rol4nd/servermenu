@@ -40,6 +40,8 @@ then
 	checkInstallApache
 	sudo apt-get -y install libapache2-mod-php7.2
 	sudo apt-get -y install php7.2-curl
+	sudo apt-get -y install php-mbstring
+	sudo apt-get -y install php7.2-zip
 else
 	echo "no value"
 fi
