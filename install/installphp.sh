@@ -39,6 +39,7 @@ then
 	sudo apt-get -y install php7.2-cli php7.2-xml
 	checkInstallApache
 	sudo apt-get -y install libapache2-mod-php7.2
+	sudo apt-get -y install php7.2-curl
 else
 	echo "no value"
 fi
