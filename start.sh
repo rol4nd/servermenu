@@ -57,6 +57,7 @@ OPTIONS=(1 "Update Server"
          20 "Install PHP7.0"
          21 "Install PHP7.1"
          22 "Install PHP7.2"
+         23 "Install PHP7.3"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
          14 "Configure Webserver for Symfonyproject"
@@ -88,6 +89,7 @@ case $CHOICE in
 	20) bash $DIR/install/installphp.sh $Startfile $DIR "7.0";;
 	21) bash $DIR/install/installphp.sh $Startfile $DIR "7.1";;
 	22) bash $DIR/install/installphp.sh $Startfile $DIR "7.2";;
+	23) bash $DIR/install/installphp.sh $Startfile $DIR "7.3";;
 
 
 	99) reboot;;
