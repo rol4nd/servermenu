@@ -5,7 +5,7 @@ projectname="symfony"
 
 composer selfupdate
 cd "$defaultfolder"
-composer create-project symfony/skeleton "$projectname"
+composer create-project symfony/website-skeleton "$projectname"
 cd "$projectname"
 composer require symfony/apache-pack
 
