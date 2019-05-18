@@ -47,14 +47,18 @@ then
 elif [ $3 == "7.3" ]
 then
 	#PHP 7.3
-	sudo apt -y install lsb-release apt-transport-https ca-certificates
-    sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+	if [ "$(whoami)" != "root" ]; then
+        SUDO=sudo
+    fi
 
-	sudo apt-get update
-	apt-get -y install php7.3
-	sudo apt-get -y install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json php7.3-curl
-	sudo apt-get -y install libapache2-mod-php7.3
+    ${SUDO} apt-get -y install apt-transport-https lsb-release ca-certificates
+    ${SUDO} wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+    ${SUDO} sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+    ${SUDO} apt-get update
+
+	${SUDO} apt-get -y install php7.3
+	${SUDO} apt-get -y install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json php7.3-curl
+	${SUDO} apt-get -y install libapache2-mod-php7.3
 
 
 
