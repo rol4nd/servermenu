@@ -50,7 +50,6 @@ MENU="Please choose a option:"
 
 #Servermenu
 OPTIONS=(1 "Update Server"
-         2 "Install Bashrc"
          3 "Install MariaDB-Server"
          4 "Install Apache2"
          5 "Install proFTPd"
@@ -79,7 +78,6 @@ showdialog
 clear
 case $CHOICE in
     1) bash $DIR/update/update.sh $Startfile $DIR;;
-	2) bash $DIR/install/installbash.sh $Startfile $DIR;;
 	3) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
 	4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 	5) bash $DIR/install/installproftpd.sh $Startfile $DIR;;
