@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-bash $1
+echo "Install apache"
 
 apt-get -y -qq install apache2
+
+bash $1
+
+
