@@ -43,20 +43,21 @@ then
 	sudo apt-get -y install php-mbstring
 	sudo apt-get -y install php7.2-zip
 	sudo apt-get -y install php-mysql
+
 elif [ $3 == "7.3" ]
 then
 	#PHP 7.3
-	sudo apt-get -y install apt-transport-https lsb-release ca-certificates
-	sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+	sudo apt -y install lsb-release apt-transport-https ca-certificates
+    sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+    echo “deb https://packages.sury.org/php/ $(lsb_release -sc) main” | sudo tee /etc/apt/sources.list.d/php7.3.list
+
 	sudo apt-get update
-	sudo apt-get -y install php7.3-cli php7.3-xml
-	checkInstallApache
+	apt-get -y install php7.3
+	sudo apt-get -y install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json php7.3-curl
 	sudo apt-get -y install libapache2-mod-php7.3
-	sudo apt-get -y install php7.3-curl
-	sudo apt-get -y install php-mbstring
-	sudo apt-get -y install php7.3-zip
-	sudo apt-get -y install php-mysql
+
+
+
 else
 	echo "no value"
 fi
