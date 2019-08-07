@@ -90,6 +90,6 @@ case $CHOICE in
 	23) bash $DIR/install/installphp.sh $Startfile $DIR "7.3";;
 
 
-	99) reboot;;
+	99) systemctl reboot;;
 esac
 
