@@ -78,7 +78,7 @@ tcf()
 
 loggingout()
 {
-    logout
+  shopt -q login_shell && logout || exit
 }
 
 systemshutdown()
