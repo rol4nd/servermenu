@@ -125,7 +125,7 @@ upinfo ()
 
 debversion()
 {
-	echo -ne "Debian Version: " $(cat /etc/debian_version | cut -b -3)
+	echo -ne "Debian Version: " $(cat /etc/debian_version)
 }
 
 cd() 
