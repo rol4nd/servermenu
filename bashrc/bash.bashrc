@@ -90,12 +90,9 @@ tcf()
 loggingout()
 {
     echo ""
-    echo "Schade dass du schon gehst :)"
-    echo ""
-    sleep 1
     echo "Bis bald!"
     echo ""
-    sleep 2
+    sleep 1
     logout
 }
 

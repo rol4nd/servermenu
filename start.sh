@@ -53,10 +53,7 @@ OPTIONS=(1 "Update Server"
          3 "Install MariaDB-Server"
          4 "Install Apache2"
          5 "Install proFTPd"
-         20 "Install PHP7.0"
-         21 "Install PHP7.1"
-         22 "Install PHP7.2"
-         23 "Install PHP7.3"
+         23 "Install PHP 7.4"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
          14 "Configure Webserver for Symfonyproject"
@@ -84,10 +81,7 @@ case $CHOICE in
 	11) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
 	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
-	20) bash $DIR/install/installphp.sh $Startfile $DIR "7.0";;
-	21) bash $DIR/install/installphp.sh $Startfile $DIR "7.1";;
-	22) bash $DIR/install/installphp.sh $Startfile $DIR "7.2";;
-	23) bash $DIR/install/installphp.sh $Startfile $DIR "7.3";;
+	23) bash $DIR/install/installphp.sh $Startfile $DIR "7.4";;
 
 
 	99) systemctl reboot;;
