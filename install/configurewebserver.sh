@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-if [[ -z $(apache2 -v 2>/dev/null) ]] && [[ -z $(httpd -v 2>/dev/null) ]]
-then
-  echo "Apache not found"
-else
 
  sudo service apache2 stop
 
@@ -19,6 +15,6 @@ else
   rm /etc/apache2/sites-enabled/default.conf
 
   sudo service apache2 start
-fi
+
 
 bash $1
