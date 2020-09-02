@@ -46,14 +46,11 @@ BACKTITLE="Serveradministration/-installation"
 TITLE="Servermenu"
 MENU="Please choose a option:"
 
-
-
 #Servermenu
 OPTIONS=(1 "Update Server"
          3 "Install MariaDB-Server"
          4 "Install Apache2"
          5 "Install proFTPd"
-         23 "Install PHP 7.4"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
          14 "Configure Webserver for Symfonyproject"
@@ -75,15 +72,15 @@ showdialog
 clear
 case $CHOICE in
     1) bash $DIR/update/update.sh $Startfile $DIR;;
-	3) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
-	4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
-	5) bash $DIR/install/installproftpd.sh $Startfile $DIR;;
-	11) bash $DIR/install/installsymfony.sh $Startfile $DIR;;
-	12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
-	14) bash $DIR/install/configurewebserverforsymfony.sh $Startfile $DIR;;
-	23) bash $DIR/install/installphp.sh $Startfile $DIR "7.4";;
 
+	  3) bash $DIR/install/installmariadb.sh $Startfile $DIR;;
+	  4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
+	  5) bash $DIR/install/installproftpd.sh $Startfile $DIR;;
 
-	99) systemctl reboot;;
+	  11) bash $DIR/symfony/installsymfony.sh $Startfile $DIR;;
+	  12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
+	  14) bash $DIR/symfony/configurewebserverforsymfony.sh $Startfile $DIR;;
+
+  	99) systemctl reboot;;
 esac
 
