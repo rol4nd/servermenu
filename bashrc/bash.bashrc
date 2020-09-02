@@ -59,22 +59,11 @@ alias ld='ls -p | grep "/"'
 alias sam=serveradministrationmenu
 alias cu=loggingout
 alias sd=systemshutdown
-alias test=test
 
 #alias rm='rm -i'
 #------------------------------------------////
 # Functions and Scripts:
 #------------------------------------------////
-
-test()
-{
-    echo "..."
-    sleep 1
-    echo "xxx"
-    sleep 2
-    echo "yyy"
-    sleep 3
-}
 
 serveradministrationmenu()
 {
@@ -89,10 +78,6 @@ tcf()
 
 loggingout()
 {
-    echo ""
-    echo "Bis bald!"
-    echo ""
-    sleep 1
     logout
 }
 
