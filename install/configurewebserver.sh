@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-if [[ -z $(apache2 -v 2>/dev/null) ]] && [[ -z $(httpd -v 2>/dev/null) ]];
+if [[ -z $(apache2 -v 2>/dev/null) ]] && [[ -z $(httpd -v 2>/dev/null) ]]
 then
   echo "Apache not found"
 else
+
  sudo service apache2 stop
 
   cp $2/$3/$3.conf /etc/apache2/sites-available/$3.conf
