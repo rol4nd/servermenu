@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-if [ "$(whoami)" != "root" ]; then
-  SUDO=sudo
-fi
-
 if [ $(/etc/init.d/apache2 status | grep -v grep | grep 'Apache2 is running' | wc -l) > 0 ]
 then
  sudo service apache2 stop
