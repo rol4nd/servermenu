@@ -6,7 +6,7 @@ fi
 
 if [ $(/etc/init.d/apache2 status | grep -v grep | grep 'Apache2 is running' | wc -l) > 0 ]
 then
- ${sudo} service apache2 stop
+ sudo service apache2 stop
 
   cp $2/$3/$3.conf /etc/apache2/sites-available/$3.conf
   ln -s /etc/apache2/sites-available/$3.conf /etc/apache2/sites-enabled/$3.conf
@@ -20,7 +20,7 @@ then
   rm /etc/apache2/sites-available/default.conf
   rm /etc/apache2/sites-enabled/default.conf
 
-  ${sudo} service apache2 start
+  sudo service apache2 start
 
 else
   echo "Apache is not installed"
