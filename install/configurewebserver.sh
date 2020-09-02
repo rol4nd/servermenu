@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-
-if [ $(/etc/init.d/apache2 status | grep -v grep | grep 'Apache2 is running' | wc -l) > 0 ]
+if [[ -z $(apache2 -v 2>/dev/null) ]] && [[ -z $(httpd -v 2>/dev/null) ]];
 then
+  echo "Apache not found"
+else
  sudo service apache2 stop
 
   cp $2/$3/$3.conf /etc/apache2/sites-available/$3.conf
@@ -17,10 +18,6 @@ then
   rm /etc/apache2/sites-enabled/default.conf
 
   sudo service apache2 start
-
-else
-  echo "Apache is not installed"
 fi
-
 
 bash $1

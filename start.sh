@@ -84,7 +84,6 @@ case $CHOICE in
 	  11) bash $DIR/symfony/installsymfony.sh $Startfile $DIR;;
 	  12) bash $DIR/symfony/createnewsymfonyproject.sh $Startfile $DIR;;
 
-
   	99) systemctl reboot;;
 esac
 
