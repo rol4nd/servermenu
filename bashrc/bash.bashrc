@@ -57,7 +57,6 @@ alias lt='ls -ltr'
 alias lm='ls -al |more'
 alias ld='ls -p | grep "/"'
 alias sam=serveradministrationmenu
-alias cu=loggingout
 alias sd=systemshutdown
 
 #alias rm='rm -i'
@@ -74,11 +73,6 @@ serveradministrationmenu()
 tcf()
 {
     watch "ls -lrth | tail -${1}"
-}
-
-loggingout()
-{
-  shopt -q login_shell && logout || exit
 }
 
 systemshutdown()
