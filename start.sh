@@ -53,6 +53,7 @@ OPTIONS=(1 "Update Server"
          5 "Install proFTPd"
          11 "Prepare for using Symfony"
          12 "Install new Symfony-Project"
+         13 "Download contao-manager"
          14 "Configure Webserver for Symfony"
          15 "Configure Webserver for Contao"
          99 "Reboot Server")
@@ -78,6 +79,7 @@ case $CHOICE in
 	  4) bash $DIR/install/installwebserver.sh $Startfile $DIR;;
 	  5) bash $DIR/install/installproftpd.sh $Startfile $DIR;;
 
+    13) bash $DIR/contao/downloadcontaomanager.sh $Startfile $DIR;;
     14) bash $DIR/install/configurewebserver.sh $Startfile $DIR "symfony";;
     15) bash $DIR/install/configurewebserver.sh $Startfile $DIR "contao";;
 
