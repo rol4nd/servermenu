@@ -38,6 +38,7 @@ sudo mkdir -p /usr/local/bin
 sudo curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
-sudo chmod a+x /usr/local/bin/symfony
+wget https://get.symfony.com/cli/installer -O - | bash
+#sudo curl -LsS https://get.symfony.com/cli/installer -O - /usr/local/bin/symfony
+#sudo chmod a+x /usr/local/bin/symfony
 bash $1
